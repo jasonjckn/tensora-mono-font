@@ -8,6 +8,7 @@
 
 * 'Tensora Mono'
 
-  ![image-20240114195609947](assets/image-20240114195609947.png)
+  ![image-20240114201001166](assets/image-20240114201001166.png)
 
-* 'Tensora Mono N' - identical to the above, but has a small caps 'N'![image-20240114195547231](assets/image-20240114195547231.png)
+* 'Tensora Mono N' - identical to the above, but has a small caps 'N'
+  ![image-20240114201028168](assets/image-20240114201028168.png)
