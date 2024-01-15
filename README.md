@@ -1,5 +1,10 @@
-# tensora-mono-font
-Tensora Mono Font , a font intended for programming languages. 
+# ![image-20240114200542770](assets/image-20240114200542770.png)
+
+
+
+#### Tensora Mono (nerd font), a font intended for programming languages. 
+
+2 variants available 
 
 * 'Tensora Mono'
 
