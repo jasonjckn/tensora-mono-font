@@ -1,9 +1,11 @@
 #!/bin/zsh
-# Build a release's two OTFs from its two SFDs: FontForge generate (build/gen.py), Nerd Fonts 3.5.1 patch, finalize
+# Build a release's two OTFs and two TTFs from its two SFDs: FontForge generate (build/gen.py), Nerd Fonts 3.5.1 patch, finalize
 # (build/finalize.py: the marks get their zero advance back after the patcher's --mono pass, and a GPOS mark-to-base lookup pins
-# them where they are drawn), then hint the font's own glyphs with otfautohint.
+# them where they are drawn), then hint the font's own glyphs with otfautohint. The TTF is the finalized, unhinted OTF with
+# TrueType outlines (build/otf2ttf.py); ttfautohint is not used, so it has no TrueType hinting.
 # Reads src/TensoraMono_vN.sfd and src/TensoraMono_N_vN.sfd, stages in build/.cache/out/, and writes
-# font_releases/DATE-vN/TensoraMono.otf and TensoraMonoN.otf (an existing directory of that name is overwritten).
+# font_releases/DATE-vN/TensoraMono.otf, TensoraMonoN.otf, TensoraMono.ttf and TensoraMonoN.ttf (an existing directory of that
+# name is overwritten).
 # build/.cache/ also holds the Nerd Fonts font patcher: downloaded and unpacked on the first run.
 # Usage: build/build.sh N DATE        e.g. build/build.sh 17 2026-11-09        (any working directory)
 set -e
@@ -51,7 +53,8 @@ for u sfd in TensoraMono TensoraMono_v$N TensoraMonoN TensoraMono_N_v$N; do
   # hint only the font's own glyphs (otfautohint crashes on some Nerd icons)
   G=$(uv run -q $=PY --with fonttools python -I -c "import sys; from fontTools.ttLib import TTFont; print(','.join(TTFont(sys.argv[1]).getGlyphOrder()))" $O/unpatched/$u.otf)
   uv run -q $=PY --with afdko otfautohint -a -g "$G" --log $O/final/$u.hint.log -o $O/final/$u.otf $O/final/$u.unhinted.otf
+  uv run -q $=PY --with fonttools python -I $B/otf2ttf.py $O/final/$u.unhinted.otf $O/final/$u.ttf
 done
 mkdir -p $REL
-cp $O/final/TensoraMono.otf $O/final/TensoraMonoN.otf $REL/
+cp $O/final/TensoraMono.otf $O/final/TensoraMonoN.otf $O/final/TensoraMono.ttf $O/final/TensoraMonoN.ttf $REL/
 echo "built: $REL/"

@@ -95,7 +95,7 @@ Beyond ASCII, the font draws the characters that terminal output and Unicode "st
 
 ## Install
 
-Download `TensoraMono.otf` and/or `TensoraMonoN.otf` from the [latest release](https://github.com/jasonjckn/tensora-mono-font/releases/latest).
+Download `TensoraMono.otf` and/or `TensoraMonoN.otf` from the [latest release](https://github.com/jasonjckn/tensora-mono-font/releases/latest); the OTFs are hinted, and the `.ttf` of the same name is unhinted, for apps that need TrueType.
 
 - **macOS:** open them in Font Book, or copy them to `~/Library/Fonts`.
 - **Linux:** copy them to `~/.local/share/fonts`, then run `fc-cache -f`.
