@@ -67,6 +67,7 @@ Beyond ASCII, the font draws the characters that terminal output and Unicode "st
 - **Small capitals**, **circled letters and digits**, **math sans** (𝗯𝗼𝗹𝗱, 𝘪𝘵𝘢𝘭𝘪𝘤) and **math monospace** (v15)
 - **Superscripts, subscripts and modifier letters**: xⁿ⁺¹, H₂O, ˢᵘᵖᵉʳ (v16)
 - **Turned letters** for upside-down text: ʇxǝʇ uʍop ǝpısdn (v17)
+- **Fishhook r** ɾ, **Latin alpha** ɑ and **dotless j with stroke** ɟ in the shapes Unicode shows, and ƃ drawn as the upside-down **g** that upside-down text uses it for (v18)
 
 #### v14: Claude Code's symbols
 
@@ -87,6 +88,10 @@ Beyond ASCII, the font draws the characters that terminal output and Unicode "st
 #### v17: turned letters and bigger circled glyphs
 
 ![Tensora Mono N v17 turned letters and circled glyphs](assets/tensora-mono-v17-turned.png)
+
+#### v18: fishhook r, alpha, j with stroke and upside-down g
+
+![Tensora Mono N v18 fishhook r, alpha, j with stroke and upside-down g](assets/tensora-mono-v18-fishhook.png)
 
 ## Install
 
