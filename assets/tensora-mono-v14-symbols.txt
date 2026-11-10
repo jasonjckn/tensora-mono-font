@@ -1,0 +1,9 @@
+⏺ Read 3 files   ⎿  Done   ✻ Thinking…
+bullet  ⏺ ◉ ○ ◌ ◎ ● ◐ ◑ ◒ ◓ ◦ ◯
+spinner ✢ ✱ ✳ ✶ ✻ ✽
+mark    ※ ℹ ↯ ★ ☆ ☐ ☑ ☒ ⚙ ⚠ ✓ ✔ ✕ ✖ ✗ ✘ ✦ ✧ ✴ ❇ ⧉
+arrow   ← ↑ ↓ ↔ ↕ ↖ ↗ ↘ ↙ ↩ ↪ ↳ ↵ ↻ ⇅ ⇞ ⇟ ⇥ ⇧ ➡ ⤴ ⤵ ⬅ ⬆ ⬇
+shape   ■ □ ▪ ▫ ▰ ▱ ▲ △ ▴ ▶ ▷ ▸ ► ▼ ▾ ◀ ◂ ◃ ◄ ◆ ◇ ◈ ◊ ◻ ◼ ⬢
+key     ⌂ ⌃ ⌘ ⌥ ⌦ ⌫ ⎋ ⎔ ⎿ ⏎ ␉ ␛ ␡ ␤
+media   ⏏ ⏭ ⏮ ⏯ ⏵ ⏸ ⏹
+bracket ‹ › ⟨ ⟩
