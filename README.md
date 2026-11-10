@@ -66,6 +66,7 @@ Beyond ASCII, the font draws the characters that terminal output and Unicode "st
 - **Combining marks** U+0300–U+036F, drawn over the previous cell: u̲n̲d̲e̲r̲l̲i̲n̲e̲, s̶t̶r̶i̶k̶e̶, o̅v̅e̅r̅l̅i̅n̅e̅ (v15)
 - **Small capitals**, **circled letters and digits**, **math sans** (𝗯𝗼𝗹𝗱, 𝘪𝘵𝘢𝘭𝘪𝘤) and **math monospace** (v15)
 - **Superscripts, subscripts and modifier letters**: xⁿ⁺¹, H₂O, ˢᵘᵖᵉʳ (v16)
+- **Turned letters** for upside-down text: ʇxǝʇ uʍop ǝpısdn (v17)
 
 #### v14: Claude Code's symbols
 
@@ -82,6 +83,10 @@ Beyond ASCII, the font draws the characters that terminal output and Unicode "st
 #### v16: superscripts and subscripts
 
 ![Tensora Mono N v16 superscripts and subscripts](assets/tensora-mono-v16-superscripts.png)
+
+#### v17: turned letters and bigger circled glyphs
+
+![Tensora Mono N v17 turned letters and circled glyphs](assets/tensora-mono-v17-turned.png)
 
 ## Install
 
