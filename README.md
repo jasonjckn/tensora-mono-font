@@ -1,17 +1,71 @@
-# ![image-20240114200542770](assets/image-20240114200542770.png)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/readme/banner-dark.png">
+    <img alt="Tensora Mono" src="assets/readme/banner-light.png" width="100%">
+  </picture>
+</p>
 
+<p align="center">
+  A monospace font for programming languages, with the Nerd Fonts icons built in.
+</p>
 
+<p align="center">
+  <a href="https://github.com/jasonjckn/tensora-mono-font/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/jasonjckn/tensora-mono-font?label=release&color=f78166"></a>
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/github/license/jasonjckn/tensora-mono-font?color=8b949e"></a>
+</p>
 
-#### Tensora Mono (nerd font), a font intended for programming languages. 
+<p align="center">
+  <a href="https://github.com/jasonjckn/tensora-mono-font/releases/latest"><b>Download</b></a> ·
+  <a href="#in-use">In use</a> ·
+  <a href="#two-variants">Two variants</a> ·
+  <a href="#unicode-coverage">Unicode coverage</a> ·
+  <a href="#install">Install</a>
+</p>
 
-2 variants available 
+## In use
 
-* 'Tensora Mono'
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/code-core-dark.png">
+  <img alt="Clojure code set in Tensora Mono" src="assets/readme/code-core-light.png" width="100%">
+</picture>
 
-  ![image-20240114201001166](assets/image-20240114201001166.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/code-day01-dark.png">
+  <img alt="Julia code set in Tensora Mono" src="assets/readme/code-day01-light.png" width="100%">
+</picture>
 
-* 'Tensora Mono N' - identical to the above, but has a small caps 'N'
-  ![image-20240114201028168](assets/image-20240114201028168.png)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/code-main-dark.png">
+  <img alt="Rust code set in Tensora Mono" src="assets/readme/code-main-light.png" width="100%">
+</picture>
+
+## Character set
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/specimen-dark.png">
+  <img alt="Tensora Mono character set" src="assets/readme/specimen-light.png" width="100%">
+</picture>
+
+Every glyph is one cell (600 units) wide, and the look-alikes are easy to tell apart: `0O`, `1lI|`, `rn m`.
+
+## Two variants
+
+Two fonts are available. **Tensora Mono N** is the same as **Tensora Mono**, but its `n` is a small capital `ɴ`.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/variants-dark.png">
+  <img alt="The same line in Tensora Mono and Tensora Mono N" src="assets/readme/variants-light.png" width="100%">
+</picture>
+
+## Unicode coverage
+
+Beyond ASCII, the font draws the characters that terminal output and Unicode "styled text" use, so editors don't fall back to other fonts with different widths and heights:
+
+- **Nerd Fonts 3.5.1** icons (10,610)
+- **Claude Code's UI symbols**: bullets, spinner, marks, arrows, keys, media (v14)
+- **Combining marks** U+0300–U+036F, drawn over the previous cell: u̲n̲d̲e̲r̲l̲i̲n̲e̲, s̶t̶r̶i̶k̶e̶, o̅v̅e̅r̅l̅i̅n̅e̅ (v15)
+- **Small capitals**, **circled letters and digits**, **math sans** (𝗯𝗼𝗹𝗱, 𝘪𝘵𝘢𝘭𝘪𝘤) and **math monospace** (v15)
+- **Superscripts, subscripts and modifier letters**: xⁿ⁺¹, H₂O, ˢᵘᵖᵉʳ (v16)
 
 #### v14: Claude Code's symbols
 
@@ -29,13 +83,30 @@
 
 ![Tensora Mono N v16 superscripts and subscripts](assets/tensora-mono-v16-superscripts.png)
 
-#### Releasing a new version
+## Install
 
-1. Save the sources as `src/TensoraMono_vN.sfd` and `src/TensoraMono_N_vN.sfd`, and build both OTFs into `font_releases/<YYYY-MM-DD>-vN/`.
-2. Write the preview text to `assets/tensora-mono-vN-<topic>.txt` and render it with `scripts/preview.sh font_releases/<dir>/TensoraMonoN.otf assets/tensora-mono-vN-<topic>.txt assets/tensora-mono-vN-<topic>.png` (`hb-view` at 160 px, white on black, so it stays sharp when zoomed). Show it inline in this README, above this section, with the other releases.
-3. Commit and push, then publish a GitHub release tagged `vN` with both OTFs and that same PNG (`gh release create vN --target main ...`).
-4. Install the new OTFs in both places:
-   - `~/Library/Fonts/` (then `fc-cache -f ~/Library/Fonts`)
-   - `~/.local/share/init/fonts/`
-   
-   Running Emacs sessions keep the old font until they restart.
+Download `TensoraMono.otf` and/or `TensoraMonoN.otf` from the [latest release](https://github.com/jasonjckn/tensora-mono-font/releases/latest).
+
+- **macOS:** open them in Font Book, or copy them to `~/Library/Fonts`.
+- **Linux:** copy them to `~/.local/share/fonts`, then run `fc-cache -f`.
+
+Then set the family name, `Tensora Mono` or `Tensora Mono N`, in your editor or terminal:
+
+```elisp
+;; Doom Emacs
+(setq doom-font (font-spec :family "Tensora Mono N" :size 14))
+```
+
+```jsonc
+// VS Code settings.json
+"editor.fontFamily": "Tensora Mono N"
+```
+
+```ini
+# Ghostty
+font-family = Tensora Mono N
+```
+
+## License
+
+[MIT](LICENSE). Maintainers: see [RELEASING.md](RELEASING.md) for how a release is built and published.
