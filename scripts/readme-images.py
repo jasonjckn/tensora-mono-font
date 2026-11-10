@@ -47,8 +47,8 @@ def banner(theme, c):
     d = ImageDraw.Draw(img)
     d.rounded_rectangle([0, 0, w * SCALE - 1, h * SCALE - 1], radius=20 * SCALE,
                         fill=c["panel"], outline=c["border"], width=2 * SCALE)
-    title, sub = font("TensoraMono.otf", 128), font("TensoraMono.otf", 26)
-    sample = font("TensoraMono.otf", 30)
+    title, sub = font("TensoraMonoN.otf", 128), font("TensoraMonoN.otf", 26)
+    sample = font("TensoraMonoN.otf", 30)
     d.text((pad * SCALE, 70 * SCALE), "Tensora Mono", font=title, fill=c["fg"])
     d.text((pad * SCALE + 6 * SCALE, 232 * SCALE),
            "a monospace font for code  ·  Nerd Fonts inside", font=sub, fill=c["muted"])
